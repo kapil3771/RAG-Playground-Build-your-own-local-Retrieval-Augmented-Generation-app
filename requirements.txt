@@ -14,7 +14,7 @@ sentence-transformers==2.2.2
 faiss-cpu==1.7.4
 
 # Output parsing
-tiktoken==0.5.1
+tiktoken
 
 # For transcript fetching (optional - you are using manual transcript now)
 youtube-transcript-api==0.6.1
