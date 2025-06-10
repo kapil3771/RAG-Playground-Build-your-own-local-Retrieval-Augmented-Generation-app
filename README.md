@@ -1,35 +1,48 @@
-RAG Pipeline with Ollama + Local Embeddings + FAISS
+# 🔥 RAG Playground — Build Your Own Local Retrieval-Augmented Generation App
 
-Retrieve & Augment Pipeline (RAG) with:
-	•	Local LLM: Ollama (gemma:2b)
-	•	Local Embedding Model: sentence-transformers/all-MiniLM-L6-v2
-	•	Vector Store: FAISS (with persistence)
-	•	Context: YouTube Transcript or Manual Transcript
-	•	Framework: LangChain + Ollama + FAISS + Sentence Transformers
+A fully local **Retrieval-Augmented Generation (RAG)** app:
 
-⸻
+✅ Ollama + Gemma 2B
+✅ Sentence Transformers for local embeddings
+✅ FAISS vector store for fast retrieval
+✅ LangChain for orchestration
+✅ Streamlit Web UI for easy interaction 
 
-Project Structure
+🚀 **Runs 100% locally — no API keys required!**
+💻 **Private & Fast** — Works on your laptop.
 
-rag-playground/
-├── rag.py              # Main RAG pipeline
-├── embeddings/
-│   └── local_embedding_model.py
-├── transcript.txt      # Your transcript to process
-├── faiss_index_folder/ # FAISS index (auto created)
-├── run.sh              # Run script
-├── requirements.txt    # Python dependencies
-├── README.md
-└── LICENSE
+---
 
+## ✨ Features
 
-⸻
+* 💻 Run on your local machine — no cloud required
+* 🧠 Augment your LLM with your own data (example: YouTube transcript)
+* 🔍 Fast semantic search using FAISS
+* 🤖 Local embedding model (`all-MiniLM-L6-v2`)
+* 🎈 Beautiful Streamlit UI — upload files and chat
+* 🗂 Modular and extensible codebase
+* ⚡️ Simple run script (`run.sh`)
+* 🗘️ Ready to deploy to GitHub
 
-Setup Instructions
+---
 
-1. Clone the repo & enter folder
+## 🛠 Tech Stack
 
-git clone https://github.com/yourusername/rag-playground.git
+* [LangChain](https://github.com/langchain-ai/langchain)
+* [Ollama](https://ollama.com/) (with `gemma:2b`)
+* [Sentence Transformers](https://www.sbert.net/)
+* [FAISS](https://github.com/facebookresearch/faiss) vector store
+* [Streamlit](https://streamlit.io/) Web App
+* Python 3.10+
+
+---
+
+## 🚀 Installation
+
+1️⃣ **Clone the repo**:
+
+```bash
+git clone https://github.com/kapil3771/rag-playground.git
 cd rag-playground
 ```
 
@@ -56,67 +69,68 @@ ollama serve
 
 ```bash
 ollama pull gemma:2b
-
-5. Provide transcript
-
-Place your transcript in:
-
-transcript.txt
-
-(Plain text file)
-
-6. Run the pipeline
-
-./run.sh
-
-Or to force clean the FAISS index:
-
-./run.sh --clean
+```
 
 
-⸻
+---
 
-Example Questions
+## 🏃️ Usage
 
-questions = [
-    "What is nuclear fusion?",
-    "What temperature is needed for fusion?",
-    "What are the challenges in achieving fusion?",
-    "What does the sun use for its energy?",
-    "Is plasma mentioned in the context?"
-]
+**Run the RAG pipeline**:
+
+```bash
+bash run.sh
+```
+
+Or manually:
+
+```bash
+python rag.py
+```
+🖥 Streamlit Web UI:
+
+```bash
+streamlit run app.py
+```
 
 
-⸻
+---
 
-Features
-	•	Works fully offline
-	•	No OpenAI API keys required
-	•	Ollama serves LLM locally
-	•	SentenceTransformers for embeddings
-	•	FAISS persistence – avoids recomputing embeddings
-	•	Modular and clean code
+## 📂 Project Structure
 
-⸻
+```
+rag-playground/
+├── app.py                     # Streamlit app UI 🚀
+├── embeddings/                # Local embedding model wrapper
+├── faiss_index_folder/        # Saved FAISS index (auto-created)
+├── uploaded_transcripts/      # (Streamlit uploads saved here)
+├── transcript.txt             # Input transcript (you provide for CLI)
+├── rag.py                     # Main RAG pipeline (CLI mode)
+├── run.sh                     # Run script (CLI)
+├── requirements.txt
+├── LICENSE
+└── README.md
+```
 
-Notes
-	•	You can replace gemma:2b with any other Ollama model (e.g. mistral, llama3, qwen, etc).
-	•	You can use any sentence-transformers embedding model.
-	•	The pipeline is modular and extensible.
+---
 
-⸻
+## ⚖️ License
 
-License
+This project is licensed under the **MIT License** — see [LICENSE](LICENSE) for details.
 
-MIT License
-See LICENSE file.
+---
 
-⸻
+## 👤 Author
 
-Contribution
+**Kapil Pravin Marathe**
+GitHub → [kapil3771](https://github.com/kapil3771)
 
-Pull requests welcome! If you like this project, please ⭐ the repo.
+---
 
-⸻
+## 🙏 Credits
 
-Enjoy building your RAG applications!
+* [LangChain](https://github.com/langchain-ai/langchain)
+* [Ollama](https://ollama.com/)
+* [FAISS (Facebook AI Research)](https://github.com/facebookresearch/faiss)
+* [Sentence Transformers (SBERT)](https://www.sbert.net/)
+* [Streamlit](https://streamlit.io/)
