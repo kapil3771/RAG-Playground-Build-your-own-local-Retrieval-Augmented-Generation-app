@@ -1,0 +1,25 @@
+# Core dependencies
+langchain==0.3.25
+langchain-core==0.3.64
+langchain-community==0.3.24
+langchain-ollama==0.3.3
+langchain-openai==0.2.1
+langchain-huggingface==0.2.0
+langchain-text-splitters==0.3.8
+
+# Embedding model
+sentence-transformers==2.2.2
+
+# Vector store
+faiss-cpu==1.7.4
+
+# Output parsing
+tiktoken==0.5.1
+
+# For transcript fetching (optional - you are using manual transcript now)
+youtube-transcript-api==0.6.1
+
+# Environment variables (optional)
+python-dotenv==1.0.1
+
+# Logging (already comes with Python but good to list if you're shipping)
