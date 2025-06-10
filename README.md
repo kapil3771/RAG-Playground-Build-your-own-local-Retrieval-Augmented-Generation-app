@@ -39,7 +39,7 @@ A fully local **Retrieval-Augmented Generation (RAG)** app:
 1️⃣ **Clone the repo**:
 
 ```bash
-git clone https://github.com/kapil3771/rag-playground.git
+git clone https://github.com/kapil3771/RAG-Playground-Build-your-own-local-Retrieval-Augmented-Generation-app.git
 cd rag-playground
 ```
 
